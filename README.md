@@ -16,7 +16,7 @@ Your goal is to do it in less moves and in less time.
 ## Developer info
 
 Game shuffles cards every time you start - there is no start button/function at the beggining.
-Both css and html were added after downloading udacity starting code. I changed html a little bit but the most is the starting code.
+Both css and html were added after downloading udacity starting code.
 Javascript was done from the scratch.
 There are event listeners when you click cards, when you click restart and there is a play again button in modal.
 Game is responsive and in all screen widths there will be four cards in the row.
