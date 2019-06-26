@@ -1,0 +1,214 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    max-width: 660px;
+    max-height: 800px;
+    background: linear-gradient(180deg, #9fa0a3 0%, #d0d1ad 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    margin: 10px;
+}
+/* Show class was not necessary so I combined open and show */
+.deck .card.open {
+    background: #59585b;
+    cursor: default;
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #cdd145;
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 300px;
+    font-size: 22px;
+    height: 50px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 10px 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+    font-size: 37px;
+    padding: 0 10px 0 10px;
+}
+/* timer style */
+.score-panel .clock {
+    margin-left: 20px;
+}
+/* modal style */
+.modal_background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal_body {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background-color: white;
+    margin: 80px auto;
+    border-radius: 40px;
+    font-family: Comic Sans MS;
+}
+
+.modal_heading {
+    text-align: center;
+}
+
+.modal_heading h2 {
+    margin-bottom: 0px;
+    padding-top: 40px;
+}
+
+.modal_heading p {
+    margin: 0;
+    font-size: 1.2em;
+    padding-bottom: 20px;
+}
+
+.modal_score {
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.modal_background.hide {
+    display: none;
+}
+
+.playAgain {
+    padding: 20px;
+    border-radius: 40px;
+    font-size: 1.3em;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+    .deck {
+        width: 95%;
+        padding: 2px;
+
+    }
+    .deck .card {
+        width: 50px;
+        height: 50px;
+    }
+    .score-panel .stars {
+      margin-left: 10px;
+    }
+    .score-panel .restart {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (min-width: 445px) and (max-width: 650px) {
+    .deck {
+        width: 95%;
+        padding: 4px;
+    }
+    .deck .card {
+        flex: 1 0 20%;
+
+    }
+}
+
+@media screen and (min-width: 378px) and (max-width: 444px) {
+    .deck {
+        width: 90%;
+        padding: 2px;
+    }
+    .deck .card {
+        flex: 1 0 19%;
+        height: 50px;
+    }
+}
+@media screen and (min-width: 322px) and (max-width: 377px) {
+    .deck {
+        width: 90%;
+        padding: 3px;
+    }
+    .deck .card {
+        max-height: 55px;
+        width: 50px;
+    }
+}
